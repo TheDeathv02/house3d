@@ -1,45 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Modern 2-Floor House</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#e6eef5, #ffffff);
+  margin: 0;
+  padding: 20px;
+}
 
-<h1>Modern 2-Floor House Design</h1>
-<p class="subtitle">Interactive 3D visualization with realistic lighting</p>
+h1, .subtitle {
+  text-align: center;
+}
 
-<div class="container">
+.subtitle {
+  color: #555;
+  margin-bottom: 25px;
+}
 
-  <!-- FLOOR DESCRIPTION -->
-  <div class="description">
-    <h2>House Layout</h2>
+.layout {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    <h3>🏠 Ground Floor</h3>
-    <p>
-      The ground floor includes a spacious living room connected to a modern kitchen,
-      a bathroom, a guest bedroom, and a two-car garage. Large windows provide natural
-      lighting and direct access to the garden.
-    </p>
+.drawing, .viewer {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 480px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
 
-    <h3>🛏️ First Floor</h3>
-    <p>
-      The first floor is designed for privacy and comfort, offering bedrooms and
-      relaxation space. The elevated structure creates a modern architectural look.
-    </p>
-  </div>
+svg {
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-  <!-- 3D VIEW -->
-  <div class="threeD">
-    <h2>3D Realistic View</h2>
-    <canvas id="scene"></canvas>
-  </div>
+.outline {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+}
 
-</div>
+.room {
+  fill: #e0e0e0;
+  stroke: black;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.152/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.152/examples/js/controls/OrbitControls.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+.desc {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+canvas {
+  width: 100%;
+  height: 360px;
+  border-radius: 10px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
