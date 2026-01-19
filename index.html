@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Modern 2-Floor House</title>
+  <meta charset="UTF-8">
+  <title>Modern 2-Floor House | Architectural View</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Modern 2-Floor House Design</h1>
-<p class="subtitle">Interactive 3D visualization with realistic lighting</p>
+<h1>Modern Two-Floor House</h1>
+<p class="subtitle">Architectural drawing + realistic 3D visualization</p>
 
-<div class="container">
+<div class="layout">
 
-  <!-- FLOOR DESCRIPTION -->
-  <div class="description">
-    <h2>House Layout</h2>
+  <!-- FLOOR DRAWING -->
+  <div class="drawing">
+    <h2>Architectural Floor Plans</h2>
 
-    <h3>🏠 Ground Floor</h3>
-    <p>
-      The ground floor includes a spacious living room connected to a modern kitchen,
-      a bathroom, a guest bedroom, and a two-car garage. Large windows provide natural
-      lighting and direct access to the garden.
+    <h3>Ground Floor</h3>
+    <svg viewBox="0 0 500 300">
+      <rect x="10" y="10" width="480" height="200" class="outline"/>
+
+      <rect x="10" y="10" width="160" height="200" class="room"/>
+      <text x="40" y="110">Garage (2 Cars)</text>
+
+      <rect x="170" y="10" width="160" height="120" class="room"/>
+      <text x="200" y="70">Living Room</text>
+
+      <rect x="170" y="130" width="160" height="80" class="room"/>
+      <text x="210" y="175">Kitchen</text>
+
+      <rect x="330" y="10" width="160" height="80" class="room"/>
+      <text x="355" y="55">Bathroom</text>
+
+      <rect x="330" y="90" width="160" height="120" class="room"/>
+      <text x="355" y="155">Guest Room</text>
+    </svg>
+
+    <p class="desc">
+      The ground floor is designed for daily living and functionality. It features
+      an open living room connected to the kitchen, a guest bedroom, a bathroom,
+      and a spacious two-car garage with direct house access.
     </p>
 
-    <h3>🛏️ First Floor</h3>
-    <p>
-      The first floor is designed for privacy and comfort, offering bedrooms and
-      relaxation space. The elevated structure creates a modern architectural look.
+    <h3>First Floor</h3>
+    <svg viewBox="0 0 500 200">
+      <rect x="10" y="10" width="480" height="150" class="outline"/>
+
+      <rect x="10" y="10" width="240" height="150" class="room"/>
+      <text x="80" y="90">Master Bedroom</text>
+
+      <rect x="260" y="10" width="230" height="70" class="room"/>
+      <text x="315" y="55">Bathroom</text>
+
+      <rect x="260" y="90" width="230" height="70" class="room"/>
+      <text x="315" y="135">Balcony</text>
+    </svg>
+
+    <p class="desc">
+      The first floor provides privacy and comfort. It includes a master bedroom
+      with a private bathroom and access to a balcony overlooking the garden.
     </p>
   </div>
 
   <!-- 3D VIEW -->
-  <div class="threeD">
-    <h2>3D Realistic View</h2>
+  <div class="viewer">
+    <h2>Realistic 3D View</h2>
+    <button id="toggle">🌙 Toggle Day / Night</button>
     <canvas id="scene"></canvas>
   </div>
 
