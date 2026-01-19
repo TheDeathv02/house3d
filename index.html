@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D House Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Modern 2-Floor House Design</h1>
+
+<div class="container">
+  <!-- FLOOR PLAN -->
+  <div class="plan">
+    <h2>Floor Plan</h2>
+
+    <svg viewBox="0 0 500 400">
+      <!-- Ground Floor -->
+      <rect x="10" y="10" width="480" height="180" class="outline"/>
+
+      <rect x="10" y="10" width="160" height="180" class="room"/>
+      <text x="40" y="100">Garage (2 Cars)</text>
+
+      <rect x="170" y="10" width="160" height="100" class="room"/>
+      <text x="190" y="60">Living Room</text>
+
+      <rect x="170" y="110" width="160" height="80" class="room"/>
+      <text x="200" y="155">Kitchen</text>
+
+      <rect x="330" y="10" width="160" height="80" class="room"/>
+      <text x="360" y="55">Bathroom</text>
+
+      <rect x="330" y="90" width="160" height="100" class="room"/>
+      <text x="360" y="145">Guest Room</text>
+
+      <!-- Garden -->
+      <rect x="10" y="210" width="480" height="80" class="garden"/>
+      <text x="220" y="255">Garden</text>
+    </svg>
+  </div>
+
+  <!-- 3D HOUSE -->
+  <div class="threeD">
+    <h2>3D View</h2>
+    <canvas id="scene"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152/build/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
