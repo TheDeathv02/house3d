@@ -1,44 +1,45 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modern 2-Floor House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
+<h1>Modern 2-Floor House Design</h1>
+<p class="subtitle">Interactive 3D visualization with realistic lighting</p>
 
-.plan, .threeD {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  width: 45%;
-}
+<div class="container">
 
-svg {
-  width: 100%;
-  height: auto;
-}
+  <!-- FLOOR DESCRIPTION -->
+  <div class="description">
+    <h2>House Layout</h2>
 
-.outline {
-  fill: none;
-  stroke: black;
-  stroke-width: 3;
-}
+    <h3>🏠 Ground Floor</h3>
+    <p>
+      The ground floor includes a spacious living room connected to a modern kitchen,
+      a bathroom, a guest bedroom, and a two-car garage. Large windows provide natural
+      lighting and direct access to the garden.
+    </p>
 
-.room {
-  fill: #e0e0e0;
-  stroke: black;
-}
+    <h3>🛏️ First Floor</h3>
+    <p>
+      The first floor is designed for privacy and comfort, offering bedrooms and
+      relaxation space. The elevated structure creates a modern architectural look.
+    </p>
+  </div>
 
-.garden {
-  fill: #9be39b;
-  stroke: green;
-}
+  <!-- 3D VIEW -->
+  <div class="threeD">
+    <h2>3D Realistic View</h2>
+    <canvas id="scene"></canvas>
+  </div>
 
-canvas {
-  width: 100%;
-  height: 350px;
-}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152/examples/js/controls/OrbitControls.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
